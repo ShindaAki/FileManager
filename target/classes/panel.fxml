@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mymanager.mfm.PanelController">
+    <HBox>
+        <children>
+            <ComboBox fx:id="disksBox" onAction="#selectDiskAction"/>
+            <TextField fx:id="pathField" editable="false" HBox.hgrow="ALWAYS"/>
+            <Button mnemonicParsing="false" text="Назад" onAction="#previousCatalogAction"/>
+        </children>
+    </HBox>
+    <TableView fx:id="filesTable" VBox.vgrow="ALWAYS" />
+    <properties>
+        <tabController><fx:reference source="controller"/> </tabController>
+    </properties>
+</VBox>
